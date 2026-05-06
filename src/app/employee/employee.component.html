@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="list">
+    <h2>Liste des Employees</h2>
+    <ul>
+      <li *ngFor="let employee of employees">
+        {{ employee.id }} - {{ employee.name }} - {{ employee.position }} - {{ employee.department }} - ${{ employee.salary }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="form">
+    <h3>Ajouter un Employee</h3>
+    <form (ngSubmit)="addEmployee()">
+      <input type="text" placeholder="Name" [(ngModel)]="newEmployee.name" name="name" required>
+      <input type="text" placeholder="Position" [(ngModel)]="newEmployee.position" name="position" required>
+      <input type="text" placeholder="Department" [(ngModel)]="newEmployee.department" name="department" required>
+      <input type="number" placeholder="Salary" [(ngModel)]="newEmployee.salary" name="salary" required>
+      <button type="submit">Add Employee</button>
+    </form>
+  </div>
+</div>

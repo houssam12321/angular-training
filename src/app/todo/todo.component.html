@@ -1,0 +1,9 @@
+<h2>Liste des Todos</h2>
+<ul>
+  <li *ngFor="let todo of todos">
+    {{ todo.id }} - {{ todo.title }} 
+    <span [style.color]="todo.completed ? 'green' : 'red'">
+      {{ todo.completed ? '✔️' : '❌' }}
+    </span>
+  </li>
+</ul>

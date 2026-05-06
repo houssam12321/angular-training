@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: space-between; /* espace entre les deux colonnes */
+  align-items: flex-start;        /* aligne en haut */
+}
+
+.list {
+  width: 30%; /* largeur de la colonne gauche */
+}
+
+.form {
+  width: 45%; /* largeur de la colonne droite */
+  border-left: 1px solid #ccc; /* petite séparation visuelle */
+  padding-left: 20px;
+}
